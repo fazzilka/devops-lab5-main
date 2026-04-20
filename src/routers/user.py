@@ -30,3 +30,7 @@ async def create_user(data: CreateUser):
 async def delete_user(email: str):
     '''Удаление пользователя'''
     db.delete_user_by_email(email)
+
+@router.get("/health/", tags=["health"])
+async def health() -> dict[str, str]:
+    return {"status": "ok"}
