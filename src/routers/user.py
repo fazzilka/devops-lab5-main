@@ -35,6 +35,3 @@ async def delete_user(email: str):
 async def health() -> dict[str, str]:
     return {"status": "ok"}
 
-@router.get("/health/", tags=["health"])
-async def health() -> dict[str, str]:
-    return {"status": "ok"}
